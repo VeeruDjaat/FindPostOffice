@@ -1,0 +1,1067 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F035B2128C0CDB2009FC3FE /* FindPostOfficUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B2028C0CDB2009FC3FE /* FindPostOfficUseCase.swift */; };
+		8F035B2A28C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B2828C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift */; };
+		8F035B2B28C0F9DD009FC3FE /* FindPostOfficeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F035B2928C0F9DD009FC3FE /* FindPostOfficeTableViewCell.xib */; };
+		8F035B2F28C10EAB009FC3FE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B2E28C10EAB009FC3FE /* Extensions.swift */; };
+		8F035B4628C1166B009FC3FE /* PostOfficeDetailsModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B3228C1166B009FC3FE /* PostOfficeDetailsModule.swift */; };
+		8F035B4728C1166B009FC3FE /* PostOfficeDetailseRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B3528C1166B009FC3FE /* PostOfficeDetailseRepository.swift */; };
+		8F035B4A28C1166B009FC3FE /* PostOfficeDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B3C28C1166B009FC3FE /* PostOfficeDetailsUseCase.swift */; };
+		8F035B4B28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B3F28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift */; };
+		8F035B5128C11711009FC3FE /* PostOfficeDetailseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F035B5028C11711009FC3FE /* PostOfficeDetailseService.swift */; };
+		8F0E692D28BDEF9700EB6C1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E692C28BDEF9700EB6C1B /* AppDelegate.swift */; };
+		8F0E692F28BDEF9700EB6C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E692E28BDEF9700EB6C1B /* SceneDelegate.swift */; };
+		8F0E693628BDEF9900EB6C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E693528BDEF9900EB6C1B /* Assets.xcassets */; };
+		8F0E693928BDEF9900EB6C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E693728BDEF9900EB6C1B /* LaunchScreen.storyboard */; };
+		8F0E694428BDEF9900EB6C1B /* FindPostOfficeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E694328BDEF9900EB6C1B /* FindPostOfficeTests.swift */; };
+		8F0E694E28BDEF9900EB6C1B /* FindPostOfficeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */; };
+		8F0E695028BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */; };
+		8F0E695F28BDF0B900EB6C1B /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E695E28BDF0B900EB6C1B /* AppContainer.swift */; };
+		8F0E696128BE0A6800EB6C1B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E696028BE0A6800EB6C1B /* NetworkManager.swift */; };
+		8F0E696628BE0B1300EB6C1B /* FindPostOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E696428BE0B1300EB6C1B /* FindPostOfficeViewController.swift */; };
+		8F0E696728BE0B1300EB6C1B /* FindPostOfficeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E696528BE0B1300EB6C1B /* FindPostOfficeViewController.xib */; };
+		8F0E696B28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E696928BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift */; };
+		8F0E696C28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E696A28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.xib */; };
+		8F0E697128BE0E2800EB6C1B /* FindPostOfficeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697028BE0E2800EB6C1B /* FindPostOfficeViewModel.swift */; };
+		8F0E697428BE112E00EB6C1B /* PostOffice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697328BE112E00EB6C1B /* PostOffice.swift */; };
+		8F0E697628BE1ADE00EB6C1B /* FindPostOfficeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697528BE1ADE00EB6C1B /* FindPostOfficeModule.swift */; };
+		8F0E697828BE25D100EB6C1B /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697728BE25D100EB6C1B /* NavigationProtocol.swift */; };
+		8F0E697A28BE2AB400EB6C1B /* FindPostOfficeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697928BE2AB400EB6C1B /* FindPostOfficeService.swift */; };
+		8F0E697E28BE2DBD00EB6C1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697D28BE2DBD00EB6C1B /* Constants.swift */; };
+		8F0E698028BE2F5400EB6C1B /* FindPostOfficeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697F28BE2F5400EB6C1B /* FindPostOfficeRepository.swift */; };
+		C2866D57E58F36FE061DD82E /* Pods_FindPostOffice_FindPostOfficeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F16516BBCC309002AAD8451D /* Pods_FindPostOffice_FindPostOfficeUITests.framework */; };
+		CF0E2489BEABE0522779FAFE /* Pods_FindPostOfficeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC45B1CD50DF66AD7FFD183D /* Pods_FindPostOfficeTests.framework */; };
+		D8E88627FD0C2768C1EF32AF /* Pods_FindPostOffice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A43C5D88019F10B9923C7A24 /* Pods_FindPostOffice.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F0E694028BDEF9900EB6C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0E692128BDEF9700EB6C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F0E692828BDEF9700EB6C1B;
+			remoteInfo = FindPostOffice;
+		};
+		8F0E694A28BDEF9900EB6C1B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0E692128BDEF9700EB6C1B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F0E692828BDEF9700EB6C1B;
+			remoteInfo = FindPostOffice;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		65B3E8699633EE4673F6E5FC /* Pods-FindPostOffice-FindPostOfficeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOffice-FindPostOfficeUITests.release.xcconfig"; path = "Target Support Files/Pods-FindPostOffice-FindPostOfficeUITests/Pods-FindPostOffice-FindPostOfficeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F035B2028C0CDB2009FC3FE /* FindPostOfficUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficUseCase.swift; sourceTree = "<group>"; };
+		8F035B2828C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeTableViewCell.swift; sourceTree = "<group>"; };
+		8F035B2928C0F9DD009FC3FE /* FindPostOfficeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPostOfficeTableViewCell.xib; sourceTree = "<group>"; };
+		8F035B2E28C10EAB009FC3FE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		8F035B3228C1166B009FC3FE /* PostOfficeDetailsModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailsModule.swift; sourceTree = "<group>"; };
+		8F035B3528C1166B009FC3FE /* PostOfficeDetailseRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailseRepository.swift; sourceTree = "<group>"; };
+		8F035B3C28C1166B009FC3FE /* PostOfficeDetailsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailsUseCase.swift; sourceTree = "<group>"; };
+		8F035B3F28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailseViewModel.swift; sourceTree = "<group>"; };
+		8F035B5028C11711009FC3FE /* PostOfficeDetailseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailseService.swift; sourceTree = "<group>"; };
+		8F0E692928BDEF9700EB6C1B /* FindPostOffice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindPostOffice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E692C28BDEF9700EB6C1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8F0E692E28BDEF9700EB6C1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8F0E693528BDEF9900EB6C1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F0E693828BDEF9900EB6C1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8F0E693A28BDEF9900EB6C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F0E693F28BDEF9900EB6C1B /* FindPostOfficeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindPostOfficeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E694328BDEF9900EB6C1B /* FindPostOfficeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeTests.swift; sourceTree = "<group>"; };
+		8F0E694928BDEF9900EB6C1B /* FindPostOfficeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindPostOfficeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeUITests.swift; sourceTree = "<group>"; };
+		8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8F0E695E28BDF0B900EB6C1B /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		8F0E696028BE0A6800EB6C1B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		8F0E696428BE0B1300EB6C1B /* FindPostOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeViewController.swift; sourceTree = "<group>"; };
+		8F0E696528BE0B1300EB6C1B /* FindPostOfficeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindPostOfficeViewController.xib; sourceTree = "<group>"; };
+		8F0E696928BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOfficeDetailsViewController.swift; sourceTree = "<group>"; };
+		8F0E696A28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostOfficeDetailsViewController.xib; sourceTree = "<group>"; };
+		8F0E697028BE0E2800EB6C1B /* FindPostOfficeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeViewModel.swift; sourceTree = "<group>"; };
+		8F0E697328BE112E00EB6C1B /* PostOffice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostOffice.swift; sourceTree = "<group>"; };
+		8F0E697528BE1ADE00EB6C1B /* FindPostOfficeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeModule.swift; sourceTree = "<group>"; };
+		8F0E697728BE25D100EB6C1B /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
+		8F0E697928BE2AB400EB6C1B /* FindPostOfficeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeService.swift; sourceTree = "<group>"; };
+		8F0E697D28BE2DBD00EB6C1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F0E697F28BE2F5400EB6C1B /* FindPostOfficeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeRepository.swift; sourceTree = "<group>"; };
+		95FC7C34B3314E93BC9555F7 /* Pods-FindPostOffice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOffice.release.xcconfig"; path = "Target Support Files/Pods-FindPostOffice/Pods-FindPostOffice.release.xcconfig"; sourceTree = "<group>"; };
+		A43C5D88019F10B9923C7A24 /* Pods_FindPostOffice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindPostOffice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07EB9DA2C45B2AABF86DBCC /* Pods-FindPostOffice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOffice.debug.xcconfig"; path = "Target Support Files/Pods-FindPostOffice/Pods-FindPostOffice.debug.xcconfig"; sourceTree = "<group>"; };
+		B708AA8E6F61F55F2E0635AB /* Pods-FindPostOfficeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOfficeTests.debug.xcconfig"; path = "Target Support Files/Pods-FindPostOfficeTests/Pods-FindPostOfficeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BC45B1CD50DF66AD7FFD183D /* Pods_FindPostOfficeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindPostOfficeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C178CC419CA0196691F95492 /* Pods-FindPostOfficeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOfficeTests.release.xcconfig"; path = "Target Support Files/Pods-FindPostOfficeTests/Pods-FindPostOfficeTests.release.xcconfig"; sourceTree = "<group>"; };
+		F16516BBCC309002AAD8451D /* Pods_FindPostOffice_FindPostOfficeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindPostOffice_FindPostOfficeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2CCFDFE5F182A12A3745F94 /* Pods-FindPostOffice-FindPostOfficeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindPostOffice-FindPostOfficeUITests.debug.xcconfig"; path = "Target Support Files/Pods-FindPostOffice-FindPostOfficeUITests/Pods-FindPostOffice-FindPostOfficeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F0E692628BDEF9700EB6C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8E88627FD0C2768C1EF32AF /* Pods_FindPostOffice.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E693C28BDEF9900EB6C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF0E2489BEABE0522779FAFE /* Pods_FindPostOfficeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E694628BDEF9900EB6C1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2866D57E58F36FE061DD82E /* Pods_FindPostOffice_FindPostOfficeUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F035B2228C0D96E009FC3FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E696428BE0B1300EB6C1B /* FindPostOfficeViewController.swift */,
+				8F0E696528BE0B1300EB6C1B /* FindPostOfficeViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8F035B2328C0D986009FC3FE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2828C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift */,
+				8F035B2928C0F9DD009FC3FE /* FindPostOfficeTableViewCell.xib */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8F035B2428C0F33C009FC3FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697928BE2AB400EB6C1B /* FindPostOfficeService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8F035B2528C0F344009FC3FE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697F28BE2F5400EB6C1B /* FindPostOfficeRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8F035B2628C0F34D009FC3FE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697328BE112E00EB6C1B /* PostOffice.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8F035B2728C0F360009FC3FE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2028C0CDB2009FC3FE /* FindPostOfficUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		8F035B2D28C10E8B009FC3FE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2E28C10EAB009FC3FE /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F035B3028C10F81009FC3FE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697728BE25D100EB6C1B /* NavigationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		8F035B3128C10FA5009FC3FE /* AppResources */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E693528BDEF9900EB6C1B /* Assets.xcassets */,
+				8F0E693728BDEF9900EB6C1B /* LaunchScreen.storyboard */,
+			);
+			path = AppResources;
+			sourceTree = "<group>";
+		};
+		8F035B3328C1166B009FC3FE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3428C1166B009FC3FE /* Repository */,
+				8F035B3628C1166B009FC3FE /* Entity */,
+				8F035B3828C1166B009FC3FE /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8F035B3428C1166B009FC3FE /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3528C1166B009FC3FE /* PostOfficeDetailseRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		8F035B3628C1166B009FC3FE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		8F035B3828C1166B009FC3FE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B5028C11711009FC3FE /* PostOfficeDetailseService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8F035B3A28C1166B009FC3FE /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3B28C1166B009FC3FE /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8F035B3B28C1166B009FC3FE /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3C28C1166B009FC3FE /* PostOfficeDetailsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		8F035B3D28C1166B009FC3FE /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3E28C1166B009FC3FE /* ViewModel */,
+				8F035B4028C1166B009FC3FE /* CustomViews */,
+				8F035B4328C1166B009FC3FE /* ViewController */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8F035B3E28C1166B009FC3FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3F28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F035B4028C1166B009FC3FE /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		8F035B4328C1166B009FC3FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E696928BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift */,
+				8F0E696A28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.xib */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		8F0E692028BDEF9700EB6C1B = {
+			isa = PBXGroup;
+			children = (
+				8F0E692B28BDEF9700EB6C1B /* FindPostOffice */,
+				8F0E694228BDEF9900EB6C1B /* FindPostOfficeTests */,
+				8F0E694C28BDEF9900EB6C1B /* FindPostOfficeUITests */,
+				8F0E692A28BDEF9700EB6C1B /* Products */,
+				BB8DEB525A4221117E00ECD8 /* Pods */,
+				A928FDF5FEA630C93EEBB3C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8F0E692A28BDEF9700EB6C1B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E692928BDEF9700EB6C1B /* FindPostOffice.app */,
+				8F0E693F28BDEF9900EB6C1B /* FindPostOfficeTests.xctest */,
+				8F0E694928BDEF9900EB6C1B /* FindPostOfficeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F0E692B28BDEF9700EB6C1B /* FindPostOffice */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E693A28BDEF9900EB6C1B /* Info.plist */,
+				8F035B3128C10FA5009FC3FE /* AppResources */,
+				8F0E697B28BE2D9600EB6C1B /* Common */,
+				8F0E695C28BDF03800EB6C1B /* Application */,
+				8F0E695D28BDF09400EB6C1B /* Networking */,
+				8F0E696228BE0ACA00EB6C1B /* AppModules */,
+			);
+			path = FindPostOffice;
+			sourceTree = "<group>";
+		};
+		8F0E694228BDEF9900EB6C1B /* FindPostOfficeTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E694328BDEF9900EB6C1B /* FindPostOfficeTests.swift */,
+			);
+			path = FindPostOfficeTests;
+			sourceTree = "<group>";
+		};
+		8F0E694C28BDEF9900EB6C1B /* FindPostOfficeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */,
+				8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */,
+			);
+			path = FindPostOfficeUITests;
+			sourceTree = "<group>";
+		};
+		8F0E695C28BDF03800EB6C1B /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E692C28BDEF9700EB6C1B /* AppDelegate.swift */,
+				8F0E692E28BDEF9700EB6C1B /* SceneDelegate.swift */,
+				8F0E695E28BDF0B900EB6C1B /* AppContainer.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		8F0E695D28BDF09400EB6C1B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E696028BE0A6800EB6C1B /* NetworkManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		8F0E696228BE0ACA00EB6C1B /* AppModules */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E696328BE0AEE00EB6C1B /* FindPostOfficeModule */,
+				8F0E696828BE0B2500EB6C1B /* PostOfficeDetailsModule */,
+			);
+			path = AppModules;
+			sourceTree = "<group>";
+		};
+		8F0E696328BE0AEE00EB6C1B /* FindPostOfficeModule */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697528BE1ADE00EB6C1B /* FindPostOfficeModule.swift */,
+				8F0E696F28BE0BB100EB6C1B /* Data */,
+				8F0E696E28BE0BA800EB6C1B /* Domain */,
+				8F0E696D28BE0B9700EB6C1B /* Presentation */,
+			);
+			path = FindPostOfficeModule;
+			sourceTree = "<group>";
+		};
+		8F0E696828BE0B2500EB6C1B /* PostOfficeDetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3228C1166B009FC3FE /* PostOfficeDetailsModule.swift */,
+				8F035B3328C1166B009FC3FE /* Data */,
+				8F035B3A28C1166B009FC3FE /* Domain */,
+				8F035B3D28C1166B009FC3FE /* Presentation */,
+			);
+			path = PostOfficeDetailsModule;
+			sourceTree = "<group>";
+		};
+		8F0E696D28BE0B9700EB6C1B /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2328C0D986009FC3FE /* CustomViews */,
+				8F035B2228C0D96E009FC3FE /* ViewController */,
+				8F0E697228BE0E9100EB6C1B /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		8F0E696E28BE0BA800EB6C1B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2728C0F360009FC3FE /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		8F0E696F28BE0BB100EB6C1B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B2628C0F34D009FC3FE /* Entity */,
+				8F035B2528C0F344009FC3FE /* Repository */,
+				8F035B2428C0F33C009FC3FE /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		8F0E697228BE0E9100EB6C1B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697028BE0E2800EB6C1B /* FindPostOfficeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8F0E697B28BE2D9600EB6C1B /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8F035B3028C10F81009FC3FE /* Protocols */,
+				8F035B2D28C10E8B009FC3FE /* Extensions */,
+				8F0E697C28BE2DAD00EB6C1B /* Constants */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8F0E697C28BE2DAD00EB6C1B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E697D28BE2DBD00EB6C1B /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A928FDF5FEA630C93EEBB3C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A43C5D88019F10B9923C7A24 /* Pods_FindPostOffice.framework */,
+				F16516BBCC309002AAD8451D /* Pods_FindPostOffice_FindPostOfficeUITests.framework */,
+				BC45B1CD50DF66AD7FFD183D /* Pods_FindPostOfficeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB8DEB525A4221117E00ECD8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B07EB9DA2C45B2AABF86DBCC /* Pods-FindPostOffice.debug.xcconfig */,
+				95FC7C34B3314E93BC9555F7 /* Pods-FindPostOffice.release.xcconfig */,
+				F2CCFDFE5F182A12A3745F94 /* Pods-FindPostOffice-FindPostOfficeUITests.debug.xcconfig */,
+				65B3E8699633EE4673F6E5FC /* Pods-FindPostOffice-FindPostOfficeUITests.release.xcconfig */,
+				B708AA8E6F61F55F2E0635AB /* Pods-FindPostOfficeTests.debug.xcconfig */,
+				C178CC419CA0196691F95492 /* Pods-FindPostOfficeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F0E692828BDEF9700EB6C1B /* FindPostOffice */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E695328BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOffice" */;
+			buildPhases = (
+				297B07BF0CC9AC710C921C8C /* [CP] Check Pods Manifest.lock */,
+				8F0E692528BDEF9700EB6C1B /* Sources */,
+				8F0E692628BDEF9700EB6C1B /* Frameworks */,
+				8F0E692728BDEF9700EB6C1B /* Resources */,
+				EDE5CB638B719C8DD5A318B9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindPostOffice;
+			productName = FindPostOffice;
+			productReference = 8F0E692928BDEF9700EB6C1B /* FindPostOffice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F0E693E28BDEF9900EB6C1B /* FindPostOfficeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E695628BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOfficeTests" */;
+			buildPhases = (
+				55457B04A130A5E64E9A82F9 /* [CP] Check Pods Manifest.lock */,
+				8F0E693B28BDEF9900EB6C1B /* Sources */,
+				8F0E693C28BDEF9900EB6C1B /* Frameworks */,
+				8F0E693D28BDEF9900EB6C1B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F0E694128BDEF9900EB6C1B /* PBXTargetDependency */,
+			);
+			name = FindPostOfficeTests;
+			productName = FindPostOfficeTests;
+			productReference = 8F0E693F28BDEF9900EB6C1B /* FindPostOfficeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F0E694828BDEF9900EB6C1B /* FindPostOfficeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E695928BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOfficeUITests" */;
+			buildPhases = (
+				87C048C25231D58CE7016F8A /* [CP] Check Pods Manifest.lock */,
+				8F0E694528BDEF9900EB6C1B /* Sources */,
+				8F0E694628BDEF9900EB6C1B /* Frameworks */,
+				8F0E694728BDEF9900EB6C1B /* Resources */,
+				703697D4E39D8AA4FC76D8C2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F0E694B28BDEF9900EB6C1B /* PBXTargetDependency */,
+			);
+			name = FindPostOfficeUITests;
+			productName = FindPostOfficeUITests;
+			productReference = 8F0E694928BDEF9900EB6C1B /* FindPostOfficeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F0E692128BDEF9700EB6C1B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					8F0E692828BDEF9700EB6C1B = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					8F0E693E28BDEF9900EB6C1B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 8F0E692828BDEF9700EB6C1B;
+					};
+					8F0E694828BDEF9900EB6C1B = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 8F0E692828BDEF9700EB6C1B;
+					};
+				};
+			};
+			buildConfigurationList = 8F0E692428BDEF9700EB6C1B /* Build configuration list for PBXProject "FindPostOffice" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F0E692028BDEF9700EB6C1B;
+			productRefGroup = 8F0E692A28BDEF9700EB6C1B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F0E692828BDEF9700EB6C1B /* FindPostOffice */,
+				8F0E693E28BDEF9900EB6C1B /* FindPostOfficeTests */,
+				8F0E694828BDEF9900EB6C1B /* FindPostOfficeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F0E692728BDEF9700EB6C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E693928BDEF9900EB6C1B /* LaunchScreen.storyboard in Resources */,
+				8F035B2B28C0F9DD009FC3FE /* FindPostOfficeTableViewCell.xib in Resources */,
+				8F0E693628BDEF9900EB6C1B /* Assets.xcassets in Resources */,
+				8F0E696728BE0B1300EB6C1B /* FindPostOfficeViewController.xib in Resources */,
+				8F0E696C28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E693D28BDEF9900EB6C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E694728BDEF9900EB6C1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		297B07BF0CC9AC710C921C8C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindPostOffice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		55457B04A130A5E64E9A82F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindPostOfficeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		703697D4E39D8AA4FC76D8C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice-FindPostOfficeUITests/Pods-FindPostOffice-FindPostOfficeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice-FindPostOfficeUITests/Pods-FindPostOffice-FindPostOfficeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice-FindPostOfficeUITests/Pods-FindPostOffice-FindPostOfficeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87C048C25231D58CE7016F8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindPostOffice-FindPostOfficeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDE5CB638B719C8DD5A318B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice/Pods-FindPostOffice-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice/Pods-FindPostOffice-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindPostOffice/Pods-FindPostOffice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F0E692528BDEF9700EB6C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E696628BE0B1300EB6C1B /* FindPostOfficeViewController.swift in Sources */,
+				8F0E695F28BDF0B900EB6C1B /* AppContainer.swift in Sources */,
+				8F035B4628C1166B009FC3FE /* PostOfficeDetailsModule.swift in Sources */,
+				8F0E696128BE0A6800EB6C1B /* NetworkManager.swift in Sources */,
+				8F035B4728C1166B009FC3FE /* PostOfficeDetailseRepository.swift in Sources */,
+				8F0E697828BE25D100EB6C1B /* NavigationProtocol.swift in Sources */,
+				8F0E697628BE1ADE00EB6C1B /* FindPostOfficeModule.swift in Sources */,
+				8F035B2A28C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift in Sources */,
+				8F0E696B28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift in Sources */,
+				8F0E697E28BE2DBD00EB6C1B /* Constants.swift in Sources */,
+				8F0E697428BE112E00EB6C1B /* PostOffice.swift in Sources */,
+				8F0E692D28BDEF9700EB6C1B /* AppDelegate.swift in Sources */,
+				8F0E692F28BDEF9700EB6C1B /* SceneDelegate.swift in Sources */,
+				8F0E697A28BE2AB400EB6C1B /* FindPostOfficeService.swift in Sources */,
+				8F035B4B28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift in Sources */,
+				8F0E698028BE2F5400EB6C1B /* FindPostOfficeRepository.swift in Sources */,
+				8F035B2F28C10EAB009FC3FE /* Extensions.swift in Sources */,
+				8F035B4A28C1166B009FC3FE /* PostOfficeDetailsUseCase.swift in Sources */,
+				8F035B5128C11711009FC3FE /* PostOfficeDetailseService.swift in Sources */,
+				8F0E697128BE0E2800EB6C1B /* FindPostOfficeViewModel.swift in Sources */,
+				8F035B2128C0CDB2009FC3FE /* FindPostOfficUseCase.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E693B28BDEF9900EB6C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E694428BDEF9900EB6C1B /* FindPostOfficeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E694528BDEF9900EB6C1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E694E28BDEF9900EB6C1B /* FindPostOfficeUITests.swift in Sources */,
+				8F0E695028BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F0E694128BDEF9900EB6C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F0E692828BDEF9700EB6C1B /* FindPostOffice */;
+			targetProxy = 8F0E694028BDEF9900EB6C1B /* PBXContainerItemProxy */;
+		};
+		8F0E694B28BDEF9900EB6C1B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F0E692828BDEF9700EB6C1B /* FindPostOffice */;
+			targetProxy = 8F0E694A28BDEF9900EB6C1B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8F0E693728BDEF9900EB6C1B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8F0E693828BDEF9900EB6C1B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8F0E695128BDEF9900EB6C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F0E695228BDEF9900EB6C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F0E695428BDEF9900EB6C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B07EB9DA2C45B2AABF86DBCC /* Pods-FindPostOffice.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindPostOffice/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = FindPostOfficeViewController;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOffice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		8F0E695528BDEF9900EB6C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95FC7C34B3314E93BC9555F7 /* Pods-FindPostOffice.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FindPostOffice/Info.plist;
+				INFOPLIST_KEY_NSMainNibFile = FindPostOfficeViewController;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOffice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		8F0E695728BDEF9900EB6C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B708AA8E6F61F55F2E0635AB /* Pods-FindPostOfficeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOfficeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindPostOffice.app/FindPostOffice";
+			};
+			name = Debug;
+		};
+		8F0E695828BDEF9900EB6C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C178CC419CA0196691F95492 /* Pods-FindPostOfficeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOfficeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FindPostOffice.app/FindPostOffice";
+			};
+			name = Release;
+		};
+		8F0E695A28BDEF9900EB6C1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2CCFDFE5F182A12A3745F94 /* Pods-FindPostOffice-FindPostOfficeUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOfficeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindPostOffice;
+			};
+			name = Debug;
+		};
+		8F0E695B28BDEF9900EB6C1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 65B3E8699633EE4673F6E5FC /* Pods-FindPostOffice-FindPostOfficeUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sapient.publicis.FindPostOfficeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FindPostOffice;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F0E692428BDEF9700EB6C1B /* Build configuration list for PBXProject "FindPostOffice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E695128BDEF9900EB6C1B /* Debug */,
+				8F0E695228BDEF9900EB6C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E695328BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOffice" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E695428BDEF9900EB6C1B /* Debug */,
+				8F0E695528BDEF9900EB6C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E695628BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOfficeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E695728BDEF9900EB6C1B /* Debug */,
+				8F0E695828BDEF9900EB6C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E695928BDEF9900EB6C1B /* Build configuration list for PBXNativeTarget "FindPostOfficeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E695A28BDEF9900EB6C1B /* Debug */,
+				8F0E695B28BDEF9900EB6C1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F0E692128BDEF9700EB6C1B /* Project object */;
+}

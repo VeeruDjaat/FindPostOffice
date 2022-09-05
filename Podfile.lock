@@ -1,0 +1,28 @@
+PODS:
+  - MBProgressHUD (1.2.0)
+  - PromiseKit (6.17.1):
+    - PromiseKit/CorePromise (= 6.17.1)
+    - PromiseKit/Foundation (= 6.17.1)
+    - PromiseKit/UIKit (= 6.17.1)
+  - PromiseKit/CorePromise (6.17.1)
+  - PromiseKit/Foundation (6.17.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.17.1):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - MBProgressHUD
+  - PromiseKit (~> 6.8)
+
+SPEC REPOS:
+  trunk:
+    - MBProgressHUD
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  PromiseKit: ee485df3d4dc570594d7e7aecae6352697dc6a4c
+
+PODFILE CHECKSUM: ed31dfa3ad6f149faa29c9a08e7e2d33996a7713
+
+COCOAPODS: 1.11.3
