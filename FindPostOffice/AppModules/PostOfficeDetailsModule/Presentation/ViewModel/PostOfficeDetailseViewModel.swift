@@ -17,11 +17,9 @@ final class PostOfficeDetailseViewModel: PostOfficeDetailseViewModelProtocol {
     
     // MARK: - Properties
     var postOfficeDetails: PostOfficeDetails
-    private let useCase: PostOfficeDetailsUseCaseProtocol
     
     // MARK: - Initialise
-    init(useCase: PostOfficeDetailsUseCaseProtocol,details:PostOfficeDetails) {
-        self.useCase = useCase
+    init(details:PostOfficeDetails) {
         self.postOfficeDetails = details
     }
     

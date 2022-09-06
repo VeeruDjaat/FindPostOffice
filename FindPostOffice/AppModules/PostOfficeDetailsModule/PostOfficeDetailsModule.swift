@@ -44,24 +44,8 @@ final class PostOfficeDetailseModule: PostOfficeDetailseNavigationProtocol {
     }
     //Initialising use case layer
     private func createPostOfficeDetailseViewModel() -> PostOfficeDetailseViewModelProtocol {
-        let viewModel = PostOfficeDetailseViewModel(useCase: createPostOfficeDetailseUseCase(), details: poDetails)
+        let viewModel = PostOfficeDetailseViewModel( details: poDetails)
         return viewModel
     }
-    //Initialising repository layer
-    private func createPostOfficeDetailseUseCase() -> PostOfficeDetailsUseCaseProtocol {
-        let useCase =  PostOfficeDetailsUseCase(repository: createPostOfficeDetailseRepository())
-        return useCase
-    }
-    //Initialising service layer
-    private func createPostOfficeDetailseRepository() -> PostOfficeDetailseRepositoryProtocol {
-        let repository = PostOfficeDetailseRepository(service: createPostOfficeDetailseService())
-        return repository
-    }
-    // Initialising network layer
-    private func createPostOfficeDetailseService() -> PostOfficeDetailseServiceProtocol {
-        let service = PostOfficeDetailseService(network: networkManager)
-        return service
-    }
-    
     
 }
