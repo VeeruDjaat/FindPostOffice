@@ -18,7 +18,7 @@ class FindPostOfficeViewController: UIViewController, Alertable {
     @IBOutlet weak var searchBar: UISearchBar!
     private enum Constants {
         static let screenTitle = "Search Post Office"
-        static let tableViewAccessibilityIdentifier = "FollowersTableView"
+        static let tableViewAccessibilityIdentifier = "poTableView"
     }
     
     override func viewDidLoad() {
@@ -36,6 +36,7 @@ class FindPostOfficeViewController: UIViewController, Alertable {
     }
     
     func registerTableViewCell(){
+        self.listTableView.accessibilityIdentifier = Constants.tableViewAccessibilityIdentifier
         self.listTableView.register(FindPostOfficeTableViewCell.nib, forCellReuseIdentifier: FindPostOfficeTableViewCell.reuseIdentifier)
     }
     

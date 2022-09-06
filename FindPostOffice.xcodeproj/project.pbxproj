@@ -17,7 +17,6 @@
 		8F0E692F28BDEF9700EB6C1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E692E28BDEF9700EB6C1B /* SceneDelegate.swift */; };
 		8F0E693628BDEF9900EB6C1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E693528BDEF9900EB6C1B /* Assets.xcassets */; };
 		8F0E693928BDEF9900EB6C1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E693728BDEF9900EB6C1B /* LaunchScreen.storyboard */; };
-		8F0E694E28BDEF9900EB6C1B /* FindPostOfficeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */; };
 		8F0E695028BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */; };
 		8F0E695F28BDF0B900EB6C1B /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E695E28BDF0B900EB6C1B /* AppContainer.swift */; };
 		8F0E696128BE0A6800EB6C1B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E696028BE0A6800EB6C1B /* NetworkManager.swift */; };
@@ -85,7 +84,6 @@
 		8F0E693A28BDEF9900EB6C1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8F0E693F28BDEF9900EB6C1B /* FindPostOfficeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindPostOfficeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0E694928BDEF9900EB6C1B /* FindPostOfficeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FindPostOfficeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeUITests.swift; sourceTree = "<group>"; };
 		8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8F0E695E28BDF0B900EB6C1B /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		8F0E696028BE0A6800EB6C1B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -311,7 +309,6 @@
 		8F0E694C28BDEF9900EB6C1B /* FindPostOfficeUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8F0E694D28BDEF9900EB6C1B /* FindPostOfficeUITests.swift */,
 				8F0E694F28BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift */,
 			);
 			path = FindPostOfficeUITests;
@@ -512,42 +509,10 @@
 		8FE70ADC28C725F2001749F8 /* PostOfficeDetailsModule */ = {
 			isa = PBXGroup;
 			children = (
-				8FE70ADD28C725F2001749F8 /* TestServices */,
-				8FE70ADF28C725F2001749F8 /* TestRepository */,
-				8FE70AE128C725F2001749F8 /* TestUseCase */,
-				8FE70AE428C725F2001749F8 /* MockClasses */,
 				8FE70AEE28C725F2001749F8 /* TestViewControllers */,
 				8FE70AF028C725F2001749F8 /* TestViewModel */,
 			);
 			path = PostOfficeDetailsModule;
-			sourceTree = "<group>";
-		};
-		8FE70ADD28C725F2001749F8 /* TestServices */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestServices;
-			sourceTree = "<group>";
-		};
-		8FE70ADF28C725F2001749F8 /* TestRepository */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestRepository;
-			sourceTree = "<group>";
-		};
-		8FE70AE128C725F2001749F8 /* TestUseCase */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestUseCase;
-			sourceTree = "<group>";
-		};
-		8FE70AE428C725F2001749F8 /* MockClasses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MockClasses;
 			sourceTree = "<group>";
 		};
 		8FE70AEE28C725F2001749F8 /* TestViewControllers */ = {
@@ -876,7 +841,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F0E694E28BDEF9900EB6C1B /* FindPostOfficeUITests.swift in Sources */,
 				8F0E695028BDEF9900EB6C1B /* FindPostOfficeUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
