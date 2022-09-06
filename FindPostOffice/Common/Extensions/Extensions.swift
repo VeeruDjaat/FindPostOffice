@@ -22,3 +22,9 @@ extension UIViewController {
       MBProgressHUD.hide(for: self.view, animated: true)
    }
 }
+
+extension String {
+    var isInt: Bool {
+        return Int(self) != nil
+    }
+}

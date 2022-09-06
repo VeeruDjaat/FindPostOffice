@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FindPostOfficeViewController: UIViewController {
+class FindPostOfficeViewController: UIViewController, Alertable {
     
     // MARK: - Property
     var viewModel: FindPostOfficeViewModelProtocol?
@@ -17,7 +17,7 @@ class FindPostOfficeViewController: UIViewController {
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
     private enum Constants {
-        static let screenTitle = "Search PostOffice"
+        static let screenTitle = "Search Post Office"
         static let tableViewAccessibilityIdentifier = "FollowersTableView"
     }
     
@@ -25,10 +25,14 @@ class FindPostOfficeViewController: UIViewController {
         super.viewDidLoad()
         self.title = Constants.screenTitle
         registerTableViewCell()
+        
+        DispatchQueue.main.async { [weak self] in
+            let pincode = self?.searchBar.text ?? ""
+            self?.viewModel?.fetchPostOfficesList(pincode: pincode)
+        }
     }
     override func viewDidAppear(_ animated: Bool) {
-        let pincode = searchBar.text ?? ""
-        viewModel?.fetchPostOfficesList(pincode: pincode)
+        
     }
     
     func registerTableViewCell(){
@@ -59,7 +63,6 @@ extension FindPostOfficeViewController : UITableViewDelegate, UITableViewDataSou
         } else {
             return UITableViewCell()
         }
-    
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -68,7 +71,6 @@ extension FindPostOfficeViewController : UITableViewDelegate, UITableViewDataSou
             self.navigationDelegate?.showDetailModule(details: details)
         }
     }
-    
     
 }
 
@@ -96,7 +98,8 @@ extension FindPostOfficeViewController : FindPostOfficeViewModelOutputProtocol {
     }
     
     func errorMessage(_ error: String) {
-        
+      showAlert(message: error, on: self)
     }
     
 }
+

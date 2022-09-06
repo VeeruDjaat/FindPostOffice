@@ -7,16 +7,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "80AF7F80-3DCE-4434-A4FF-33B3448EA1D3"
+            uuid = "442EC48D-0729-44BC-88B2-7DEAE601A13A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FindPostOffice/AppModules/FindPostOfficeModule/FindPostOfficeModule.swift"
+            filePath = "FindPostOfficeTests/FindPostOfficeModule/MockFollower/MockFollowersData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "showDetailModule(details:)"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "MockFindPostOfficeData"
+            landmarkType = "21">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D973310E-EB27-4F72-8C50-56A7ADE9DFD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindPostOfficeTests/FindPostOfficeModule/MockClasses/MockFindPostOfficeUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "validatePincode(for:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B38EB762-B6C4-440D-8AF4-44ED2BBDCA3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FindPostOfficeTests/FindPostOfficeModule/MockClasses/MockFindPostOfficeUseCase.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "GetPostOfficesList(pincode:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

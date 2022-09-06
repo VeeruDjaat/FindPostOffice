@@ -37,13 +37,20 @@ final class FindPostOfficeViewModel: FindPostOfficeViewModelProtocol {
     // MARK: - Methods
     
     func fetchPostOfficesList(pincode: String) {
-        self.outputDelegate?.showLoader()
-        useCase.GetPostOfficesList(pincode: pincode).done(on: .main) { [weak self] model in
-            self?.getData(model: model)
-        }
-        .catch(on: .main, policy: .allErrors) { [weak self] error in
-            self?.outputDelegate?.errorMessage(error.localizedDescription)
-            self?.outputDelegate?.hideLoader()
+       
+        useCase.validatePincode(for: pincode) { status in
+            if status {
+                self.outputDelegate?.showLoader()
+                useCase.GetPostOfficesList(pincode: pincode).done(on: .main) { [weak self] model in
+                    self?.getData(model: model)
+                }
+                .catch(on: .main, policy: .allErrors) { [weak self] error in
+                    self?.outputDelegate?.errorMessage(error.localizedDescription)
+                    self?.outputDelegate?.hideLoader()
+                }
+            } else {
+                self.outputDelegate?.errorMessage("Please enter valid pincode")
+            }
         }
     }
     
