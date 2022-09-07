@@ -38,11 +38,11 @@ class FindOfficeRepositoryTest: XCTestCase {
     
     func testRepositoryFailure() {
         let expecatation = expectation(description: "Failure")
-        mockService.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kRepositoryFailedErrorMessage])
+        mockService.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kRepositoryTestErrorMessage])
         guard let findPORepository = findPORepository else { return }
         findPORepository.callServiceToGetPostOfficesList(pincode: AppConstants.testData.validPincode)
             .catch {error in
-                XCTAssertTrue(error.localizedDescription == ErrorMessage.kRepositoryFailedErrorMessage)
+                XCTAssertTrue(error.localizedDescription == ErrorMessage.kRepositoryTestErrorMessage)
                 expecatation.fulfill()
             }
         

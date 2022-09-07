@@ -37,7 +37,7 @@ class FindPostOfficeServiceTest: XCTestCase {
 
     func testServiceError() {
         let expecatation = expectation(description: "Follower service on success case")
-        mockNetworkManager.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kServiceFailedErrorMeesage])
+        mockNetworkManager.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kServiceTestErrorMessage])
         guard let poService = poService else { return }
         poService.makeNetworkRequest(pincode: AppConstants.testData.validPincode)
             .catch { _ in

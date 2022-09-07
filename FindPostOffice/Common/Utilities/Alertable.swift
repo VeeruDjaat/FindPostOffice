@@ -7,12 +7,12 @@
 
 import UIKit
 
-protocol Alertable {
-    func showAlert(title: String?, message: String?, on controller: UIViewController)
+protocol AlertProtocol {
+    func presentAlert(title: String?, message: String?, on controller: UIViewController)
 }
 
-extension Alertable{
-    func showAlert(title: String? = nil, message: String?, on controller: UIViewController) {
+extension AlertProtocol{
+    func presentAlert(title: String? = nil, message: String?, on controller: UIViewController) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
         DispatchQueue.main.async {

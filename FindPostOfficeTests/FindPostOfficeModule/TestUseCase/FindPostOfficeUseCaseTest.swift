@@ -61,11 +61,11 @@ class FindPostOfficeUseCaseTest: XCTestCase {
     func testUseCaseGetOfficeListFailure() {
 
         let expecatation = expectation(description: "Failure")
-        repository.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kUseCaseFailedErrorMessage])
+        repository.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kUseCaseTestErrorMessage])
         guard let useCase = useCase else { return }
         useCase.GetPostOfficesList(pincode: AppConstants.testData.validPincode)
             .catch { error in
-                XCTAssertTrue(error.localizedDescription == ErrorMessage.kUseCaseFailedErrorMessage)
+                XCTAssertTrue(error.localizedDescription == ErrorMessage.kUseCaseTestErrorMessage)
                 expecatation.fulfill()
             }
 

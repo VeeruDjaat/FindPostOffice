@@ -20,14 +20,12 @@ enum AppConstants {
         static  let validPincode = "110092"
         static  let blankPincode = "  "
         static  let invalidPincode = " 11ab"
-
     }
-    
 }
 
 struct ErrorMessage {
-    static let kServiceFailedErrorMeesage = "Find PostOffice Serivce test failed error"
-    static let kRepositoryFailedErrorMessage = "Find PostOffice Repository Test Failed Error"
-    static let kUseCaseFailedErrorMessage = "Find PostOffice Use Case Test Failed Error"
+    static let kServiceTestErrorMessage = "Find PostOffice Serivce test failed error"
+    static let kRepositoryTestErrorMessage = "Find PostOffice Repository Test Failed Error"
+    static let kUseCaseTestErrorMessage = "Find PostOffice Use Case Test Failed Error"
 }
 

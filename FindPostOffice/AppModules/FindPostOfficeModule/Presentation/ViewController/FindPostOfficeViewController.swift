@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FindPostOfficeViewController: UIViewController, Alertable {
+class FindPostOfficeViewController: UIViewController, AlertProtocol {
     
     // MARK: - Property
     var viewModel: FindPostOfficeViewModelProtocol?
@@ -99,7 +99,7 @@ extension FindPostOfficeViewController : FindPostOfficeViewModelOutputProtocol {
     }
     
     func errorMessage(_ error: String) {
-      showAlert(message: error, on: self)
+      presentAlert(message: error, on: self)
     }
     
 }
