@@ -31,7 +31,7 @@
 		8F0E697A28BE2AB400EB6C1B /* FindPostOfficeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697928BE2AB400EB6C1B /* FindPostOfficeService.swift */; };
 		8F0E697E28BE2DBD00EB6C1B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697D28BE2DBD00EB6C1B /* Constants.swift */; };
 		8F0E698028BE2F5400EB6C1B /* FindPostOfficeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E697F28BE2F5400EB6C1B /* FindPostOfficeRepository.swift */; };
-		8F9CD78A28C609FF00A9A90C /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CD78928C609FF00A9A90C /* Alertable.swift */; };
+		8F9CD78A28C609FF00A9A90C /* AlertProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CD78928C609FF00A9A90C /* AlertProtocol.swift */; };
 		8F9CD7A228C615B200A9A90C /* FindPostOfficeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CD78F28C615B200A9A90C /* FindPostOfficeViewModelTest.swift */; };
 		8F9CD7A328C615B200A9A90C /* FindOfficeRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CD79128C615B200A9A90C /* FindOfficeRepositoryTest.swift */; };
 		8F9CD7A428C615B200A9A90C /* MockFindPostOfficeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F9CD79328C615B200A9A90C /* MockFindPostOfficeRepository.swift */; };
@@ -102,7 +102,7 @@
 		8F0E697928BE2AB400EB6C1B /* FindPostOfficeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeService.swift; sourceTree = "<group>"; };
 		8F0E697D28BE2DBD00EB6C1B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8F0E697F28BE2F5400EB6C1B /* FindPostOfficeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPostOfficeRepository.swift; sourceTree = "<group>"; };
-		8F9CD78928C609FF00A9A90C /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		8F9CD78928C609FF00A9A90C /* AlertProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertProtocol.swift; sourceTree = "<group>"; };
 		8F9CD78C28C615B200A9A90C /* PostOffice.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PostOffice.json; sourceTree = "<group>"; };
 		8F9CD78F28C615B200A9A90C /* FindPostOfficeViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPostOfficeViewModelTest.swift; sourceTree = "<group>"; };
 		8F9CD79128C615B200A9A90C /* FindOfficeRepositoryTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindOfficeRepositoryTest.swift; sourceTree = "<group>"; };
@@ -431,7 +431,7 @@
 		8F9CD78828C609D500A9A90C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8F9CD78928C609FF00A9A90C /* Alertable.swift */,
+				8F9CD78928C609FF00A9A90C /* AlertProtocol.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -522,7 +522,6 @@
 			isa = PBXGroup;
 			children = (
 				8FE70AEE28C725F2001749F8 /* TestViewControllers */,
-				8FE70AF028C725F2001749F8 /* TestViewModel */,
 			);
 			path = PostOfficeDetailsModule;
 			sourceTree = "<group>";
@@ -533,13 +532,6 @@
 				8FE70AEF28C725F2001749F8 /* PostOfficeDetailsVCTest.swift */,
 			);
 			path = TestViewControllers;
-			sourceTree = "<group>";
-		};
-		8FE70AF028C725F2001749F8 /* TestViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TestViewModel;
 			sourceTree = "<group>";
 		};
 		A928FDF5FEA630C93EEBB3C2 /* Frameworks */ = {
@@ -815,7 +807,7 @@
 				8F0E697828BE25D100EB6C1B /* NavigationProtocol.swift in Sources */,
 				8F0E697628BE1ADE00EB6C1B /* FindPostOfficeModule.swift in Sources */,
 				8F035B2A28C0F9DD009FC3FE /* FindPostOfficeTableViewCell.swift in Sources */,
-				8F9CD78A28C609FF00A9A90C /* Alertable.swift in Sources */,
+				8F9CD78A28C609FF00A9A90C /* AlertProtocol.swift in Sources */,
 				8F0E696B28BE0B4D00EB6C1B /* PostOfficeDetailsViewController.swift in Sources */,
 				8F0E697E28BE2DBD00EB6C1B /* Constants.swift in Sources */,
 				8F9ECABA28C84FAC0052B803 /* FindPostOfficeRepositoryProtocol.swift in Sources */,
