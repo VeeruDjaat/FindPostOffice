@@ -7,10 +7,6 @@
 
 import Foundation
 
-protocol FindPostOfficeRepositoryProtocol {
-    func callServiceToGetPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse
-}
-
 
 class FindPostOfficeRepository: FindPostOfficeRepositoryProtocol {
 

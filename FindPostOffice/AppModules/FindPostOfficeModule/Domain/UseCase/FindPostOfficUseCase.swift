@@ -8,12 +8,6 @@
 import Foundation
 
 
-protocol FindPostOfficUseCaseProtocol {
-    
-    func validatePincode(for pincode: String, completion: (Bool) -> ())
-    func GetPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse
-}
-
 class FindPostOfficUseCase: FindPostOfficUseCaseProtocol {
    
     func validatePincode(for pincode: String, completion: (Bool) -> ()) {

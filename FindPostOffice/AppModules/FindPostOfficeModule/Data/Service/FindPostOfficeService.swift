@@ -9,10 +9,6 @@ import Foundation
 import PromiseKit
 
 
-protocol FindPostOfficeServiceProtocol {
-    func makeNetworkRequest(pincode:String) -> FindPostOfficeServiceResponse
-}
-
 class FindPostOfficeService: FindPostOfficeServiceProtocol {
 
     private let network: NetworkManagerProtocol
