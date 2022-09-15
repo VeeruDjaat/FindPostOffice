@@ -36,7 +36,7 @@ class NetworkManagerTest: XCTestCase {
         }
         guard let testUrl = testUrl,
               let networkManager = networkManager else { return }
-        networkManager.request(PostOffice.self, endPoint: testUrl)
+        networkManager.request(httpMethod: .get, url: testUrl, type: PostOffice.self, httpBody: nil)
             .done { model in
                 let poCount = model.first?.postOfficeList?.count ?? 0
                 if poCount >= 1 {
@@ -65,7 +65,7 @@ class NetworkManagerTest: XCTestCase {
         
         guard let testUrl = testUrl,
               let networkManager = networkManager else { return }
-        networkManager.request(PostOffice.self, endPoint: testUrl)
+        networkManager.request(httpMethod: .get, url: testUrl, type: PostOffice.self, httpBody: nil)
             .done { model in
                 XCTFail("Success response was not expected in this case.")
             }.catch { error in

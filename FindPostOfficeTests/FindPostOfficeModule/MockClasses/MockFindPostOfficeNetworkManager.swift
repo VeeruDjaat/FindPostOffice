@@ -10,11 +10,7 @@ import PromiseKit
 @testable import FindPostOffice
 
 class MockFindPostOfficeNetworkManager: NetworkManagerProtocol {
-    
-    var postOffice:PostOffice?
-    var error: Error?
-
-    func request<T: Codable>(_ type: T.Type, endPoint: URL) -> Response<T> {
+    func request<T>(httpMethod: httpMethod, url: URL, type: T.Type, httpBody: Data?) -> Response<T> where T : Decodable, T : Encodable {
         return Promise { promise in
             if let error = error {
                 promise.reject(error)
@@ -27,4 +23,9 @@ class MockFindPostOfficeNetworkManager: NetworkManagerProtocol {
             }
         }
     }
+    
+    
+    var postOffice:PostOffice?
+    var error: Error?
+
 }

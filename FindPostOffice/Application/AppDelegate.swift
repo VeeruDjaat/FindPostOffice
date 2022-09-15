@@ -6,9 +6,6 @@
 //
 
 
-
-//https://api.postalpincode.in/pincode/110093
-
 import UIKit
 
 @main

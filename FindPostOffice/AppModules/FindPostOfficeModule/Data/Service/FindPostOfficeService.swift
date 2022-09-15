@@ -21,7 +21,8 @@ class FindPostOfficeService: FindPostOfficeServiceProtocol {
         let endPoint = AppConstants.UserAPIEndpoint.searchPostOfficeUrl(pincode: pincode)
         let url = URL(string: endPoint)
         guard let url = url else { return Promise.value([]) }
-        let serviceResponse = network.request([PostOfficeElement].self, endPoint: url)
+        let serviceResponse = network.request(httpMethod: .get, url: url, type: [PostOfficeElement].self, httpBody: nil)
+
         return serviceResponse
     }
 }

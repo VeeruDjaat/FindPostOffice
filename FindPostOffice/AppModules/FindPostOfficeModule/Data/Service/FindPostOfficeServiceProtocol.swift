@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import PromiseKit
 
+typealias FindPostOfficeServiceResponse = Promise<PostOffice>
 
 protocol FindPostOfficeServiceProtocol {
     func makeNetworkRequest(pincode:String) -> FindPostOfficeServiceResponse

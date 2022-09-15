@@ -41,7 +41,7 @@ final class FindPostOfficeViewModel: FindPostOfficeViewModelProtocol {
         useCase.validatePincode(for: pincode) { status in
             if status {
                 self.outputDelegate?.showLoader()
-                useCase.GetPostOfficesList(pincode: pincode).done(on: .main) { [weak self] model in
+                useCase.getPostOfficesList(pincode: pincode).done(on: .main) { [weak self] model in
                     self?.getData(model: model)
                 }
                 .catch(on: .main, policy: .allErrors) { [weak self] error in

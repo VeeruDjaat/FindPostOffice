@@ -241,7 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				8F035B3E28C1166B009FC3FE /* ViewModel */,
-				8F035B4028C1166B009FC3FE /* CustomViews */,
 				8F035B4328C1166B009FC3FE /* ViewController */,
 			);
 			path = Presentation;
@@ -253,13 +252,6 @@
 				8F035B3F28C1166B009FC3FE /* PostOfficeDetailseViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		8F035B4028C1166B009FC3FE /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		8F035B4328C1166B009FC3FE /* ViewController */ = {

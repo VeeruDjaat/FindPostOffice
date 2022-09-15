@@ -46,7 +46,7 @@ class FindPostOfficeUseCaseTest: XCTestCase {
         let expecatation = expectation(description: "Success")
         repository.postOffice = MockFindPostOfficeData.postOffice
         guard let useCase = useCase else { return }
-        useCase.GetPostOfficesList(pincode: AppConstants.testData.validPincode)
+        useCase.getPostOfficesList(pincode: AppConstants.testData.validPincode)
             .done { model in
                 let postOfficeCount = model.first?.postOfficeList?.count ?? 0
                 if postOfficeCount >= 1 {
@@ -63,7 +63,7 @@ class FindPostOfficeUseCaseTest: XCTestCase {
         let expecatation = expectation(description: "Failure")
         repository.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kUseCaseTestErrorMessage])
         guard let useCase = useCase else { return }
-        useCase.GetPostOfficesList(pincode: AppConstants.testData.validPincode)
+        useCase.getPostOfficesList(pincode: AppConstants.testData.validPincode)
             .catch { error in
                 XCTAssertTrue(error.localizedDescription == ErrorMessage.kUseCaseTestErrorMessage)
                 expecatation.fulfill()

@@ -8,26 +8,28 @@
 import Foundation
 import PromiseKit
 
+enum httpMethod {
+    case get
+    case post
+}
+
 typealias Response<T> = Promise<T>
-typealias FindPostOfficeServiceResponse = Promise<PostOffice>
-typealias PostOfficeDetailseServiceResponse = Promise<PostOffice>
 
 protocol NetworkManagerProtocol {
-    func request<T: Codable>(_ type: T.Type, endPoint: URL) -> Response<T>
+    func request<T: Codable>(httpMethod:httpMethod, url: URL,type: T.Type,httpBody:Data?) -> Response<T>
 }
 
 
 class NetworkManger: NetworkManagerProtocol {
-
-    private let session: URLSession
-
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
-
-    func request<T: Codable>(_ type: T.Type, endPoint: URL) -> Response<T> {
+    func request<T>(httpMethod: httpMethod, url: URL, type: T.Type, httpBody: Data?) -> Response<T> where T : Decodable, T : Encodable {
         return Promise { seal in
-            let request = URLRequest(url: endPoint)
+            var request = URLRequest(url: url)
+            request.httpMethod = "\(httpMethod)"
+            
+            if httpMethod == .post {
+                request.httpBody = httpBody
+            }
+            
             let task = session.dataTask(with: request) { data, response, error in
                 if let error = error {
                     seal.reject(error)
@@ -35,7 +37,6 @@ class NetworkManger: NetworkManagerProtocol {
                     do {
                         if let dataRecieved = data {
                             let decoder = JSONDecoder()
-                            decoder.keyDecodingStrategy = .convertFromSnakeCase
                             let decodedObject = try decoder.decode(type, from: dataRecieved)
                             seal.fulfill(decodedObject)
                         }
@@ -47,5 +48,12 @@ class NetworkManger: NetworkManagerProtocol {
             }
             task.resume()
         }
+    }
+    
+
+    private let session: URLSession
+
+    init(session: URLSession = .shared) {
+        self.session = session
     }
 }

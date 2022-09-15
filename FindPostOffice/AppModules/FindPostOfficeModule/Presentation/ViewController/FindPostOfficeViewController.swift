@@ -9,6 +9,11 @@ import UIKit
 
 class FindPostOfficeViewController: UIViewController, AlertProtocol {
     
+    private enum Constants {
+        static let screenTitle = "Search Post Office"
+        static let tableViewAccessibilityIdentifier = "poTableView"
+    }
+    
     // MARK: - Property
     var viewModel: FindPostOfficeViewModelProtocol?
     var navigationDelegate: FindPostOfficeNavigationProtocol?
@@ -16,10 +21,7 @@ class FindPostOfficeViewController: UIViewController, AlertProtocol {
     @IBOutlet weak var listTableView: UITableView!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var searchBar: UISearchBar!
-    private enum Constants {
-        static let screenTitle = "Search Post Office"
-        static let tableViewAccessibilityIdentifier = "poTableView"
-    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +42,7 @@ class FindPostOfficeViewController: UIViewController, AlertProtocol {
         self.listTableView.register(FindPostOfficeTableViewCell.nib, forCellReuseIdentifier: FindPostOfficeTableViewCell.reuseIdentifier)
     }
     
-    func UpdateView(){
+    func updateView(){
         self.listTableView.reloadData()
         self.messageLabel.text = self.viewModel?.postOffice.message
     }
@@ -95,7 +97,7 @@ extension FindPostOfficeViewController : FindPostOfficeViewModelOutputProtocol {
     }
     
     func success() {
-        self.UpdateView()
+        self.updateView()
     }
     
     func errorMessage(_ error: String) {

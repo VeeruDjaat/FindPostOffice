@@ -23,7 +23,7 @@ class MockFindPostOfficeUseCase: FindPostOfficUseCaseProtocol {
         }
     }
     
-    func GetPostOfficesList(pincode: String) -> FindPostOfficeServiceResponse {
+    func getPostOfficesList(pincode: String) -> FindPostOfficeServiceResponse {
         return Promise { promise in
             if let error = error {
                 promise.reject(error)

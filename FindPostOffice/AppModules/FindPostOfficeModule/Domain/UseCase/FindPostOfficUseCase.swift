@@ -28,7 +28,7 @@ class FindPostOfficUseCase: FindPostOfficUseCaseProtocol {
         self.repository = repository
     }
 
-    func GetPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse {
+    func getPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse {
         return repository.callServiceToGetPostOfficesList(pincode:pincode)
     }
     
