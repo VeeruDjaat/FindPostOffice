@@ -26,7 +26,7 @@ class FindPostOfficUseCase: FindPostOfficUseCaseProtocol {
         
         let pincode = pincode.trimmingCharacters(in: .whitespacesAndNewlines)
         
-         if pincode.isInt && !pincode.isEmpty {
+        if pincode.isInt && !pincode.isEmpty && pincode.count == 6{
              completion(true)
          } else {
             completion(false)
