@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PostOfficeDetailseViewModelProtocol {
-    var postOfficeDetails: PostOfficeDetails { get }
+    var postOfficeDetails: PostOfficeInfo { get }
 }
 
 
@@ -16,10 +16,10 @@ final class PostOfficeDetailseViewModel: PostOfficeDetailseViewModelProtocol {
     
     
     // MARK: - Properties
-    var postOfficeDetails: PostOfficeDetails
+    var postOfficeDetails: PostOfficeInfo
     
     // MARK: - Initialise
-    init(details:PostOfficeDetails) {
+    init(details:PostOfficeInfo) {
         self.postOfficeDetails = details
     }
     

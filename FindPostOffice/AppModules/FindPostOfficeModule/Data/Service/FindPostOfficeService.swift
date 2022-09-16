@@ -8,7 +8,7 @@
 import Foundation
 import PromiseKit
 
-
+// This is service class
 class FindPostOfficeService: FindPostOfficeServiceProtocol {
 
     private let network: NetworkManagerProtocol
@@ -16,6 +16,8 @@ class FindPostOfficeService: FindPostOfficeServiceProtocol {
     init(network: NetworkManagerProtocol) {
         self.network = network
     }
+    
+    // In this function Calling Network Layer
     
     func makeNetworkRequest(pincode:String) -> FindPostOfficeServiceResponse {
         let endPoint = AppConstants.UserAPIEndpoint.searchPostOfficeUrl(pincode: pincode)

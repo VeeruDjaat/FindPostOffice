@@ -22,9 +22,9 @@ class FindOfficeRepositoryTest: XCTestCase {
         mockService.postOffice = MockFindPostOfficeData.postOffice
         guard let findPORepository = findPORepository else { return }
         
-        findPORepository.callServiceToGetPostOfficesList(pincode: AppConstants.testData.validPincode)
+        findPORepository.getPostOfficesList(pincode: AppConstants.testData.validPincode)
             .done { model in
-                let postOfficeCount = model.first?.postOfficeList?.count ?? 0
+                let postOfficeCount = model.postOffices?.count ?? 0
                 if postOfficeCount >= 1 {
                     expecatation.fulfill()
                 }
@@ -40,7 +40,7 @@ class FindOfficeRepositoryTest: XCTestCase {
         let expecatation = expectation(description: "Failure")
         mockService.error = NSError(domain: "com.postoffice.error", code: 0, userInfo: [NSLocalizedDescriptionKey: ErrorMessage.kRepositoryTestErrorMessage])
         guard let findPORepository = findPORepository else { return }
-        findPORepository.callServiceToGetPostOfficesList(pincode: AppConstants.testData.validPincode)
+        findPORepository.getPostOfficesList(pincode: AppConstants.testData.validPincode)
             .catch {error in
                 XCTAssertTrue(error.localizedDescription == ErrorMessage.kRepositoryTestErrorMessage)
                 expecatation.fulfill()

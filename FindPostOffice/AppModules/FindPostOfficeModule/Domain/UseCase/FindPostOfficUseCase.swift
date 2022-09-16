@@ -10,6 +10,18 @@ import Foundation
 
 class FindPostOfficUseCase: FindPostOfficUseCaseProtocol {
    
+
+    private let repository: FindPostOfficeRepositoryProtocol
+
+    init(repository: FindPostOfficeRepositoryProtocol) {
+        self.repository = repository
+    }
+
+    
+    func getPostOfficesList(pincode: String) -> PostOfficeDomainResponse {
+        return repository.getPostOfficesList(pincode: pincode)
+    }
+
     func validatePincode(for pincode: String, completion: (Bool) -> ()) {
         
         let pincode = pincode.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -20,16 +32,4 @@ class FindPostOfficUseCase: FindPostOfficUseCaseProtocol {
             completion(false)
         }
     }
-    
-
-    private let repository: FindPostOfficeRepositoryProtocol
-
-    init(repository: FindPostOfficeRepositoryProtocol) {
-        self.repository = repository
-    }
-
-    func getPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse {
-        return repository.callServiceToGetPostOfficesList(pincode:pincode)
-    }
-    
 }

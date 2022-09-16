@@ -18,13 +18,13 @@ final class PostOfficeDetailseModule: PostOfficeDetailseNavigationProtocol {
     // MARK: - Properties
     var navigationController: UINavigationController
     private let networkManager: NetworkManagerProtocol
-    var poDetails:PostOfficeDetails
+    var poDetails:PostOfficeInfo
     private enum Constants {
         static let nibName = "PostOfficeDetailsViewController"
     }
 
     // MARK: - Initialise
-    init(details:PostOfficeDetails, navigationController: UINavigationController, networkManager:NetworkManagerProtocol) {
+    init(details:PostOfficeInfo, navigationController: UINavigationController, networkManager:NetworkManagerProtocol) {
         self.navigationController = navigationController
         self.poDetails = details
         self.networkManager = networkManager

@@ -44,11 +44,11 @@ class FindPostOfficeUseCaseTest: XCTestCase {
 
     func testUseCaseGetOfficeListSuccess() {
         let expecatation = expectation(description: "Success")
-        repository.postOffice = MockFindPostOfficeData.postOffice
+        repository.postOffice = MockFindPostOfficeData.postOfficeDomainData
         guard let useCase = useCase else { return }
         useCase.getPostOfficesList(pincode: AppConstants.testData.validPincode)
             .done { model in
-                let postOfficeCount = model.first?.postOfficeList?.count ?? 0
+                let postOfficeCount = model.postOffices?.count ?? 0
                 if postOfficeCount >= 1 {
                     expecatation.fulfill()
                 }

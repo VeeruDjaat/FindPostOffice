@@ -10,11 +10,11 @@ import PromiseKit
 @testable import FindPostOffice
 
 class MockFindPostOfficeRepository: FindPostOfficeRepositoryProtocol {
-
-    var postOffice:PostOffice?
+    
+    var postOffice:FindPostOfficeDomainData?
     var error: Error?
-
-    func callServiceToGetPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse {
+    
+    func getPostOfficesList(pincode: String) -> PostOfficeDomainResponse {
         
         return Promise { promise in
             if let error = error {
@@ -28,4 +28,8 @@ class MockFindPostOfficeRepository: FindPostOfficeRepositoryProtocol {
             }
         }
     }
+    
+
+   
+
 }

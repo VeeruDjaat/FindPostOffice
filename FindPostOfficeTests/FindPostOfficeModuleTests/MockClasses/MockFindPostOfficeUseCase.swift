@@ -11,7 +11,7 @@ import PromiseKit
 
 class MockFindPostOfficeUseCase: FindPostOfficUseCaseProtocol {
    
-    var postOffice:PostOffice?
+    var postOffice:FindPostOfficeDomainData?
     var error: Error?
     
     func validatePincode(for pincode: String, completion: (Bool) -> ()) {
@@ -23,7 +23,7 @@ class MockFindPostOfficeUseCase: FindPostOfficUseCaseProtocol {
         }
     }
     
-    func getPostOfficesList(pincode: String) -> FindPostOfficeServiceResponse {
+    func getPostOfficesList(pincode: String) -> PostOfficeDomainResponse {
         return Promise { promise in
             if let error = error {
                 promise.reject(error)

@@ -21,7 +21,7 @@ class FindPostOfficeViewModelTest: XCTestCase {
 
     func testViewModelSuccess() {
         expecatation = expectation(description: "Success")
-        useCase.postOffice = MockFindPostOfficeData.postOffice
+        useCase.postOffice = MockFindPostOfficeData.postOfficeDomainData
         viewModel?.fetchPostOfficesList(pincode: AppConstants.testData.validPincode)
         wait(for: [expecatation], timeout: 3.0)
     }

@@ -10,6 +10,26 @@ import Foundation
 
 class MockFindPostOfficeData {
 
+    static var postOfficeDomainData: FindPostOfficeDomainData {
+        
+        guard let data = readLocalJSONFile(forName: "PostOffice") else {
+            return FindPostOfficeDomainData()
+            
+        }
+        
+        guard let modal = parse(jsonData: data) else {
+            return FindPostOfficeDomainData()
+            
+        }
+        
+        guard let domainmodal = modal.first?.toDomain() else {
+            return FindPostOfficeDomainData()
+            
+        }
+        
+        return domainmodal
+    }
+    
     static var postOfficeData:Data {
         guard let data = readLocalJSONFile(forName: "PostOffice") else {return Data()}
         return data

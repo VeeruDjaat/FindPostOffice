@@ -44,7 +44,7 @@ class FindPostOfficeViewController: UIViewController, AlertProtocol {
     
     func updateView(){
         self.listTableView.reloadData()
-        self.messageLabel.text = self.viewModel?.postOffice.message
+        self.messageLabel.text = self.viewModel?.postOfficeDomainData.message
     }
     
 }
@@ -52,13 +52,13 @@ class FindPostOfficeViewController: UIViewController, AlertProtocol {
 
 extension FindPostOfficeViewController : UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.postOffice.postOfficeList?.count ?? 0
+        return self.viewModel?.postOfficeDomainData.postOffices?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: FindPostOfficeTableViewCell.reuseIdentifier) as? FindPostOfficeTableViewCell {
             
-            if   let details = self.viewModel?.postOffice.postOfficeList?[indexPath.row] {
+            if   let details = self.viewModel?.postOfficeDomainData.postOffices?[indexPath.row] {
                 cell.titleLabel.text = details.name
                 cell.subTitleLabel?.text = details.district
             }
@@ -70,7 +70,7 @@ extension FindPostOfficeViewController : UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        if let details = self.viewModel?.postOffice.postOfficeList?[indexPath.row] {
+        if let details = self.viewModel?.postOfficeDomainData.postOffices?[indexPath.row] {
             self.navigationDelegate?.showDetailModule(details: details)
         }
     }

@@ -4,6 +4,8 @@
 //
 //  Created by Dharmendra Chaudhary on 30/08/22.
 //
+// This is data model for getOffice Api
+//
 
 import Foundation
 
@@ -13,7 +15,7 @@ typealias PostOffice = [PostOfficeElement]
 struct PostOfficeElement: Codable {
     var message, status: String?
     var postOfficeList: [PostOfficeDetails]?
-
+    
     enum CodingKeys: String, CodingKey {
         case message = "Message"
         case status = "Status"
@@ -22,12 +24,13 @@ struct PostOfficeElement: Codable {
 }
 
 // MARK: - PostOfficeDetails
+
 struct PostOfficeDetails: Codable {
     var name: String?
     var branchType, deliveryStatus, circle, district: String?
     var division, region, block, state: String?
     var country, pincode: String?
-
+    
     enum CodingKeys: String, CodingKey {
         case name = "Name"
         case branchType = "BranchType"
@@ -43,3 +46,21 @@ struct PostOfficeDetails: Codable {
     }
 }
 
+extension PostOfficeElement {
+    
+    func toDomain() -> FindPostOfficeDomainData {
+        return .init(message: message, postOffices: postOfficeList.map({ array in
+            array.map { $0.toDomain()
+            }
+        }))
+    }
+    
+}
+
+
+extension PostOfficeDetails {
+    func toDomain() -> PostOfficeInfo {
+        return .init(name: name, branchType: branchType, circle: circle, district: district, division: division, region: region, block: block, state: state, country: country, pincode: pincode)
+    }
+    
+}

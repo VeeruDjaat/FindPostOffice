@@ -24,6 +24,7 @@ enum AppConstants {
 }
 
 struct ErrorMessage {
+    static let kDataMissingErrorMessage = "Find PostOffice Data Missing"
     static let kServiceTestErrorMessage = "Find PostOffice Serivce test failed error"
     static let kRepositoryTestErrorMessage = "Find PostOffice Repository Test Failed Error"
     static let kUseCaseTestErrorMessage = "Find PostOffice Use Case Test Failed Error"

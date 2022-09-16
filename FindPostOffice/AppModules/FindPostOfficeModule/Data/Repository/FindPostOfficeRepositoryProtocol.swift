@@ -6,7 +6,12 @@
 //
 
 import Foundation
+import PromiseKit
 
+typealias PostOfficeDomainResponse = Promise<FindPostOfficeDomainData>
+
+//Repository Protocol
 protocol FindPostOfficeRepositoryProtocol {
-    func callServiceToGetPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse
+    func getPostOfficesList(pincode: String) -> PostOfficeDomainResponse
+
 }

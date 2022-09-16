@@ -9,5 +9,6 @@ import Foundation
 protocol FindPostOfficUseCaseProtocol {
     
     func validatePincode(for pincode: String, completion: (Bool) -> ())
-    func getPostOfficesList(pincode:String) -> FindPostOfficeServiceResponse
+    func getPostOfficesList(pincode: String) -> PostOfficeDomainResponse
+
 }

@@ -25,7 +25,7 @@ class MockFindPostOfficeNetworkManager: NetworkManagerProtocol {
     }
     
     
-    var postOffice:PostOffice?
+    var postOffice:[PostOfficeElement]?
     var error: Error?
 
 }

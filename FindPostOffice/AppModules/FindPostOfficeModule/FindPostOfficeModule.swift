@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol FindPostOfficeNavigationProtocol: NavigationProtocol {
-    func showDetailModule(details: PostOfficeDetails)
+    func showDetailModule(details: PostOfficeInfo)
 }
 
 /// Builds up all the layer of FindPostOffice module.
@@ -64,7 +64,9 @@ final class FindPostOfficeModule: FindPostOfficeNavigationProtocol {
     }
     
     // MARK: - Navigation Methods
-    func showDetailModule(details: PostOfficeDetails) {
+    // Use this to navigate to detail ViewController
+    
+    func showDetailModule(details: PostOfficeInfo) {
      let detailModule = PostOfficeDetailseModule(details: details, navigationController: navigationController, networkManager: networkManager)
         detailModule.start()
     }

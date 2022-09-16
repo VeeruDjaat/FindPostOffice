@@ -8,7 +8,7 @@
 import Foundation
 
 protocol FindPostOfficeViewModelProtocol {
-    var postOffice: PostOfficeElement { get }
+    var postOfficeDomainData: FindPostOfficeDomainData { get }
     func fetchPostOfficesList(pincode:String)
     var outputDelegate: FindPostOfficeViewModelOutputProtocol? { get set }
 }
@@ -25,7 +25,7 @@ final class FindPostOfficeViewModel: FindPostOfficeViewModelProtocol {
     
     // MARK: - Properties
     
-    var postOffice = PostOfficeElement()
+    var postOfficeDomainData = FindPostOfficeDomainData()
     var outputDelegate: FindPostOfficeViewModelOutputProtocol?
     private let useCase: FindPostOfficUseCaseProtocol
     
@@ -37,12 +37,14 @@ final class FindPostOfficeViewModel: FindPostOfficeViewModelProtocol {
     // MARK: - Methods
     
     func fetchPostOfficesList(pincode: String) {
-       
+        
         useCase.validatePincode(for: pincode) { status in
             if status {
                 self.outputDelegate?.showLoader()
                 useCase.getPostOfficesList(pincode: pincode).done(on: .main) { [weak self] model in
-                    self?.getData(model: model)
+                    self?.postOfficeDomainData = model
+                    self?.outputDelegate?.success()
+                    self?.outputDelegate?.hideLoader()
                 }
                 .catch(on: .main, policy: .allErrors) { [weak self] error in
                     self?.outputDelegate?.errorMessage(error.localizedDescription)
@@ -52,12 +54,8 @@ final class FindPostOfficeViewModel: FindPostOfficeViewModelProtocol {
                 self.outputDelegate?.errorMessage("Please enter valid pincode")
             }
         }
+                
     }
     
-    private func getData(model: PostOffice) {
-        postOffice = model.first ?? PostOfficeElement()
-        outputDelegate?.success()
-        self.outputDelegate?.hideLoader()
-    }
 }
 

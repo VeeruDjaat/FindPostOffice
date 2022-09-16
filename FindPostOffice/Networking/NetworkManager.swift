@@ -21,6 +21,13 @@ protocol NetworkManagerProtocol {
 
 
 class NetworkManger: NetworkManagerProtocol {
+    
+    private let session: URLSession
+
+    init(session: URLSession = .shared) {
+        self.session = session
+    }
+    
     func request<T>(httpMethod: httpMethod, url: URL, type: T.Type, httpBody: Data?) -> Response<T> where T : Decodable, T : Encodable {
         return Promise { seal in
             var request = URLRequest(url: url)
@@ -51,9 +58,5 @@ class NetworkManger: NetworkManagerProtocol {
     }
     
 
-    private let session: URLSession
-
-    init(session: URLSession = .shared) {
-        self.session = session
-    }
+    
 }
