@@ -10,7 +10,7 @@ import PromiseKit
 
 // Domain Layer Model
 
-struct FindPostOfficeDomainData:Codable {
+struct FindPostOfficeDomainData {
     var message: String?
     var postOffices: [PostOfficeInfo]?
 
@@ -18,7 +18,7 @@ struct FindPostOfficeDomainData:Codable {
 }
 
 // MARK: - PostOfficeDetails
-struct PostOfficeInfo: Codable {
+struct PostOfficeInfo {
     var name: String?
     var branchType, circle, district: String?
     var division, region, block, state: String?
